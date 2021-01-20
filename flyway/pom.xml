@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.myweboasis</groupId>
+    <artifactId>learning-spring</artifactId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+  <groupId>com.myweboasis.learning</groupId>
+  <artifactId>flyway</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <name>flyway</name>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.flywaydb</groupId>
+        <artifactId>flyway-maven-plugin</artifactId>
+        <version>7.5.0</version>
+        <configuration>
+          <url>jdbc:h2:tcp://localhost/~/test</url>
+          <user>sa</user>
+        </configuration>
+        <dependencies>
+          <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>1.4.197</version>
+          </dependency>
+        </dependencies>
+      </plugin>
+    </plugins>
+  </build>
+</project>

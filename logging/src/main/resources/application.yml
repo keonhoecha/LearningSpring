@@ -1,0 +1,5 @@
+spring:
+logging:
+  level:
+    root: DEBUG
+    com.myweboasis.learning.controller: INFO
